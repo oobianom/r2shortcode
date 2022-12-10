@@ -6,6 +6,8 @@
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/r2shortcode)](https://cran.r-project.org/package=r2shortcode) [![](https://cranlogs.r-pkg.org/badges/grand-total/r2shortcode)](https://cran.r-project.org/package=r2shortcode) 
 
 
+__Have you come across packages with function names that are either too long or too similar to another frequently used function? Well, what if you can change those function names and still use the package?__
+
 Shorten function names of packages. Make it easier to use. Write long descriptive functions in your R package. Users have the choice to use the long form of the function name or shorten the functions using the r2shortcode package.
 
 ![](http://coursewhiz.org/mainsite/img/r2shortcode.jpg)
