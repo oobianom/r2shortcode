@@ -1,4 +1,4 @@
-# r2shortcode: An R Package that Shortens Other R Packages Functions
+# r2shortcode: An R Package that Helps Shorten Other R Package Functions
 
 ### Official site: https://r2shortcode.obi.obianom.com
 
