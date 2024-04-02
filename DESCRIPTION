@@ -1,6 +1,6 @@
 Package: r2shortcode
 Type: Package
-Title: R2Shortcode, Package and Function Short Forms
+Title: Shorten Function Names of Functions in Another Package and Create an Index to Make Them Accessible
 Version: 0.2
 Author: Obinna Obianom
 Maintainer: Obinna Obianom <idonshayo@gmail.com>
