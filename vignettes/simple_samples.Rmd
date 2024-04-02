@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 The number of R packages created per month by users is increasing dramatically. When creating a package, authors may sometimes struggle with coming up with easy to remember function names, and at the same time hoping that other packages do not already have the same function names. In trying to meet this goal sometimes, function names are not descriptive enough and may confuse the potential users. The purpose of the r2shortcode package is to serve as a package function shortener and also provide shorthand names for other functions. Having this package will entice authors to create long function names without the fear of users not wanting to use their packages because of the long names. In a way, everyone wins - the authors can use long descriptive function names, and the users can use the r2shortcode to shorten the functions while still using the package in question.
 
-Below is an example to demonstrate how the r2shortcode package can be used to shorten function names in a package called r2resume -  [main site](http://r2resume.com) or [github site](https://github.com/oobianom/r2resume)
+Below is an example to demonstrate how the r2shortcode package can be used to shorten function names in a package called r2resume -  [main site](https://r2resumer.coursewhiz.org/) or [github site](https://github.com/oobianom/r2resume)
 
 ## Attach the r2shortcode package
 
