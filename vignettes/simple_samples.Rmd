@@ -1,10 +1,10 @@
 ---
-title: "Shorten the r2resume package"
+title: "Introducing the r2shortcode R package, that helps shorten other packages"
 author: "Obinna Obianom"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Shorten r2resume package}
+  %\VignetteIndexEntry{Introducing the r2shortcode R package, that helps shorten other packages}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -37,7 +37,7 @@ library("r2shortcode")
 Second, call the shorten function to shorten a desired package already installed in your library
 
 
-```{r}
+```
 
 shortenPkg("r2resume",addPrefix = T)
 # you may include more packages on a new line
@@ -48,7 +48,7 @@ shortenPkg("r2resume",addPrefix = T)
 
 Thirdly, get a list of the created shorthand function names and their corresponding functions
 
-```{r}
+```
 
 index("r2resume")
 
@@ -58,7 +58,7 @@ index("r2resume")
 
 Forthly and alternatively, get the description for a specific shorthand function
 
-```{r}
+```
 
 help("r2.gP") #OR whatis("r2.gP")
 
