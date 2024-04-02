@@ -9,7 +9,7 @@ License: MIT + file LICENSE
 URL: https://github.com/oobianom/r2shortcode
 BugReports: https://github.com/oobianom/r2shortcode
 Depends: 
-    R (>= 3.4)
+    R (> 3.6)
 Imports: 
     utils,
     stringr, 
