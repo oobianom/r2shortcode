@@ -9,6 +9,18 @@ index(pkg = stop("Enter a package name to index"))
 \arguments{
 \item{pkg}{The package name}
 }
+\value{
+List of long and short forms of particular functions
+}
 \description{
 This function will provide you the list of shorthand functions created for a package
+}
+\examples{
+\donttest{
+if(interactive()){
+pkgname <- 'qpdf'
+shortenPkg(pkgname,TRUE)
+index(pkgname)
+}
+}
 }

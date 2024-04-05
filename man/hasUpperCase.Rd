@@ -9,6 +9,17 @@ hasUpperCase(string)
 \arguments{
 \item{string}{the string to evaluate}
 }
+\value{
+TRUE or FALSE if the string has an upper case letter
+}
 \description{
 Simply change if there is any uppercase letter in a string
+}
+\examples{
+strToTest1 <- 'obiWentToSchool'
+strToTest2 <- 'obiwenttoschool'
+hasUpperCase(strToTest1)
+hasUpperCase(strToTest2)
+
+
 }

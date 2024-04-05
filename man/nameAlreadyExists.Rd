@@ -9,6 +9,14 @@ nameAlreadyExists(name)
 \arguments{
 \item{name}{The name to lookup}
 }
+\value{
+TRUE or FALSE
+}
 \description{
-Simply evaluates if a name has already been saved by the r2shortcode. Keep in mind that if you previously used the clear function, previously saved names will be cleared
+Evaluates if a name has already been saved by the r2shortcode. Keep in mind that if you previously used the clear function, previously saved names will be cleared
+}
+\examples{
+nameToCheck <- 'Obinna'
+nameAlreadyExists(nameToCheck)
+
 }

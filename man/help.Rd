@@ -11,6 +11,18 @@ help(functionName, package = NULL)
 
 \item{package}{package name containing the function. Leave unentered if this is a shorthand function}
 }
+\value{
+Documentation for function
+}
 \description{
 Access help for all functions including any newly created shorthand functions
+}
+\examples{
+\donttest{
+pkgname <- 'qpdf' #pacakge name
+shortenPkg(pkgname,TRUE) #shorten the package
+index(pkgname) #index the package functions shortened
+help('qpd.pl') #choose a function name and find help
+}
+
 }

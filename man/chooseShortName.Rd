@@ -9,7 +9,7 @@ chooseShortName(
   withPrefix = NULL,
   withSuffix = NULL,
   envir = NULL,
-  silent = F
+  silent = FALSE
 )
 }
 \arguments{
@@ -23,6 +23,15 @@ chooseShortName(
 
 \item{silent}{Return response at the end of evaluations?}
 }
+\value{
+Short forms of functions
+}
 \description{
 A very simple and short algorithm to choose a short name based on a given name
+}
+\examples{
+long_function_name <- 'longFunctionCall'
+short_function_name <- chooseShortName(long_function_name)
+short_function_name # the result should "lFC"
+
 }

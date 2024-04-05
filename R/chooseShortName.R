@@ -8,9 +8,18 @@
 #' @param envir The environment where to store the name
 #' @param silent Return response at the end of evaluations?
 #'
+#' @return Short forms of functions
+#'
+#' @examples
+#' long_function_name <- 'longFunctionCall'
+#' short_function_name <- chooseShortName(long_function_name)
+#' short_function_name # the result should "lFC"
+#'
 #' @export
+#'
+#'
 
-chooseShortName <- function(fullname = stop("Invalid string name entered."), withPrefix = NULL, withSuffix = NULL, envir = NULL, silent = F) {
+chooseShortName <- function(fullname = stop("Invalid string name entered."), withPrefix = NULL, withSuffix = NULL, envir = NULL, silent = FALSE) {
 
   # package  fullname set to another variable, and if its a three letter word - just split it back out because there is no need to shorten such
   strN <- fullname
@@ -18,19 +27,19 @@ chooseShortName <- function(fullname = stop("Invalid string name entered."), wit
     return(paste0(withPrefix, strN, withSuffix))
   }
 
-  #prepare the name prior to running algorithm tests of choosing
+  # prepare the name prior to running algorithm tests of choosing
   strSpl <- "__"
   strN.complete <- NULL
   strN.firstletter <- substr(strN, 1, 1)
-  selectedN <- T
+  selectedN <- TRUE
   checkFirstLetterUppercase <- isUpperCase(strN.firstletter)
   checkIfAnyUpperCase <- hasUpperCase(strN)
   checkIfAnySpecialChar <- hasSpecialCharacters(strN)
   getUpperCaseOccurence <- stringr::str_extract_all(strN, "[A-Z]")[[1]]
-  doNotSkip1And2 <- T
+  doNotSkip1And2 <- TRUE
   if (checkFirstLetterUppercase) {
     strN.complete <- getUpperCaseOccurence
-    if (length(strN.complete) == 1) doNotSkip1And2 <- F
+    if (length(strN.complete) == 1) doNotSkip1And2 <- FALSE
   } else {
     if (checkIfAnyUpperCase) {
       strN.complete <- c(strN.firstletter, getUpperCaseOccurence)
@@ -39,7 +48,7 @@ chooseShortName <- function(fullname = stop("Invalid string name entered."), wit
       if (checkIfAnySpecialChar) {
         strN.complete <- substr(strsplit(strN, "[[:punct:]]")[[1]], 1, 1)
       } else {
-        doNotSkip1And2 <- F
+        doNotSkip1And2 <- FALSE
       }
     }
   }
@@ -65,7 +74,7 @@ chooseShortName <- function(fullname = stop("Invalid string name entered."), wit
     strN2.complete <- strN.complete
     if (strN.complete1.size) {
       strN.numChar <- nchar(strN.complete1)
-      strN.numChar <- strN.numChar[order(strN.numChar, decreasing = T)[1]]
+      strN.numChar <- strN.numChar[order(strN.numChar, decreasing = TRUE)[1]]
       i <- 1
       origStartNrn <- origStartNrn0 <- if (checkFirstLetterUppercase) 1 else 2
       while (i <= strN.numChar) {
@@ -106,10 +115,23 @@ chooseShortName <- function(fullname = stop("Invalid string name entered."), wit
 
 #' Clears previously stored names
 #'
-#' Beware that by clearing all stored names, you may inadventently duplicate new names
+#' Beware that by clearing all stored names, you may inadventently duplicate new shortnames
+#'
+#' @param w what to clear
+#'
+#' @return empty stores for chosen name
+#'
+#' @examples
+#' nametostore = "ujuo"
+#' storeChosenName(nametostore) #store the chosen name
+#' nameAlreadyExists(nametostore) #check if the chosen name now exists in store
+#' clearStoredNames("all") #clear storage of all names
+#' nameAlreadyExists(nametostore) #check if the chosen name now exists in store, it should not
 #'
 #' @export
 #'
-clearStoredNames <- function() {
-  options(".funCNames" = c())
+clearStoredNames <- function(w = "all") {
+  if(w == "all"){
+   oldoptions <- options(".funCNames" = c())
+  }
 }

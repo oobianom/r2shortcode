@@ -13,6 +13,16 @@ searchNameSaveName(withPrefix = NULL, strN.complete, withSuffix = NULL)
 
 \item{withSuffix}{Provide the suffix to use for the function name, could use NULL}
 }
+\value{
+Concatenate of search and a boolean
+}
 \description{
 Carries out a search on the already used shorthand function names and if the new name does not exist, it saves it
+}
+\examples{
+nameToCheck <- 'ObiObianom'
+searchNameSaveName(strN.complete= nameToCheck)
+searchNameSaveName(strN.complete= nameToCheck)
+
+
 }

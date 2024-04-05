@@ -4,7 +4,11 @@
 \alias{discardShortcodes}
 \title{Discard shortcodes}
 \usage{
-discardShortcodes(pkg, reflib = options()$.funCNamesPkgReference, response = T)
+discardShortcodes(
+  pkg,
+  reflib = options()$.funCNamesPkgReference,
+  response = TRUE
+)
 }
 \arguments{
 \item{pkg}{package name}
@@ -13,6 +17,17 @@ discardShortcodes(pkg, reflib = options()$.funCNamesPkgReference, response = T)
 
 \item{response}{TRUE or FALSE, return a response upon completion}
 }
+\value{
+unloads short function names
+}
 \description{
 This will discard all shorthand functions created and delete them from stores as well. Good if you inadvertently shorthand a package.
+}
+\examples{
+\donttest{
+pkgName = 'quickcode'
+shortenPkg(pkgName)
+discardShortcodes(pkgName)
+}
+
 }

@@ -9,6 +9,17 @@ isUpperCase(string)
 \arguments{
 \item{string}{The string to evaluate}
 }
+\value{
+TRUE or FALSE if the string is all upper case
+}
 \description{
-Simply, evaluate if a string is uppercase
+Simply, test if a string is uppercase and return TRUE or FALSE
+}
+\examples{
+strTest1 <- 'OBI'
+strTest2 <- 'obiO'
+isUpperCase(strTest1)
+isUpperCase(strTest2)
+
+
 }

@@ -9,6 +9,14 @@ storeChosenName(name)
 \arguments{
 \item{name}{The chosen name to store}
 }
+\value{
+store the chosen name in storage variable
+}
 \description{
 When all else passes, store this particular name in memory
+}
+\examples{
+nameStore <- 'ObiStore1'
+storeChosenName(nameStore)
+
 }

@@ -4,7 +4,7 @@
 \alias{shortenPkg}
 \title{Shorten the package}
 \usage{
-shortenPkg(pkg, addPrefix = T, silent = F, num.prefix = 3)
+shortenPkg(pkg, addPrefix = TRUE, silent = FALSE, num.prefix = 3)
 }
 \arguments{
 \item{pkg}{package name}
@@ -15,6 +15,16 @@ shortenPkg(pkg, addPrefix = T, silent = F, num.prefix = 3)
 
 \item{num.prefix}{if you specify to addPrefix, how many letters will you like to add?}
 }
+\value{
+short function names for all the functions in the package
+}
 \description{
 This will create shorthand functions for functions in a package. This function brings together most functions in this package.
+}
+\examples{
+\donttest{
+pkg <- 'qpdf'
+shortenPkg(pkg,FALSE,TRUE)
+}
+
 }

@@ -9,6 +9,16 @@ hasSpecialCharacters(string)
 \arguments{
 \item{string}{The string to evaluate}
 }
+\value{
+TRUE or FALSE
+}
 \description{
 Evaluates if a specified string contains special characters
+}
+\examples{
+strToTest1 <- 'obi_\%_good_^you'
+strToTest2 <- 'obigoodyou'
+hasSpecialCharacters(strToTest1)
+hasSpecialCharacters(strToTest2)
+
 }
